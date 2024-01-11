@@ -1,13 +1,11 @@
 package week07;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Department implements Factory {
 	Scanner scan = new Scanner(System.in);
 	Manager studentMgr = new Manager();
 	static Manager LecMgr = new Manager();
-	static ArrayList<Lecture> lectureList = new ArrayList<>(); // 왜 static?
 
 	void run() {
 		LecMgr.readAll("lecture.txt", () -> new Lecture()); // 람다함수

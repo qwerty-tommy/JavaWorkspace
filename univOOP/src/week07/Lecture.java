@@ -9,10 +9,6 @@ public class Lecture implements Manageable {
 	String day;
 	String time;
 
-	public Lecture() {
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public void read(Scanner scan) {
 		code = scan.next();

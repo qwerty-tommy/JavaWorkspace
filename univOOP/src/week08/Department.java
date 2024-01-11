@@ -3,6 +3,7 @@ package week08;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import mgr.Factory;
 import mgr.Manager;
@@ -36,7 +37,7 @@ public class Department {
 				return new Lecture();
 			}
 		});
-		lectureMgr.printAll();
+//		lectureMgr.printAll();
 		System.out.println("==정렬된 강의 리스트==");
 		// Collections.sort(lectureMgr.mList);
 		Collections.sort(lectureMgr.mList, new Comparator<Lecture>() {
@@ -46,10 +47,14 @@ public class Department {
 			}
 
 		});
-		lectureMgr.printAll();
-		studentMgr.readAll("student.txt", new StudentFac());
-		studentMgr.printAll();
-		searchMenu();
+
+		lectureMgr.mList.stream().forEach(s -> s.print());
+		lectureMgr.mList.stream().forEach(Lecture::print);
+
+//		lectureMgr.printAll();
+//		studentMgr.readAll("student.txt", new StudentFac());
+//		studentMgr.printAll();
+//		searchMenu();
 	}
 
 	class StudentFac implements Factory<Student> {

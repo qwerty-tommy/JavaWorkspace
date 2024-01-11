@@ -2,9 +2,8 @@ package manager;
 
 import java.util.Scanner;
 
-interface Manageable {
-
-	public void read(Scanner scan);
-	public void print();
+public interface Manageable {
+	void read(Scanner scan);
+	void print();
 	boolean matches(String kwd);
 }

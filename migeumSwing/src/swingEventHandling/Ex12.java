@@ -33,7 +33,8 @@ class MyFrame12 extends JFrame {
 			int rndColor = (int) (Math.random() * color.length);
 			int rndx = (int) (Math.random() * 500);
 			int rndy = (int) (Math.random() * 500);
-			g.setColor(color[rndColor]);
+			g.setColor(
+					new Color((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256)));
 			g.drawOval(rndx, rndy, 50, 50);
 			g.fillOval(rndx, rndy, 50, 50);
 		}

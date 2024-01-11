@@ -1,5 +1,6 @@
 package manager;
 
-public interface Factory {
-	public Manageable create();
+@FunctionalInterface
+public interface Factory<T extends Manageable> {
+	public T create();
 }
